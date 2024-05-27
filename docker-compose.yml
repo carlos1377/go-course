@@ -1,0 +1,14 @@
+services:
+  go-mysql:
+    image: mysql
+    env_file:
+      - ./.env
+    ports:
+      - 3306:3306
+    expose:
+      - 3306
+    volumes:
+      - ./mysql:/var/lib/mysql
+
+volumes:
+  go-mysql:
